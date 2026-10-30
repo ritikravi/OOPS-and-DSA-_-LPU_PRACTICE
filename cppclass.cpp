@@ -1356,39 +1356,187 @@
 
 
 
+
+
+// #include <iostream>
+// using namespace std;
+ 
+// class a{
+//     public:
+//     void print(){
+//         cout<<"hello"<<endl;
+//     }
+// };
+
+
+// class b{
+//     public:
+//     void print(){
+//         cout<<"hi"<<endl;
+//     }
+// };
+
+// class c:public a ,public b{
+//     public:
+
+//     using a :: print;
+//     using b :: print;
+
+
+// };
+
+// int main(){
+//     c c1;
+//     c1.print();
+    
+//     return 0;
+
+// }
+
+
+
+
+
+
+// #include <iostream>
+// using namespace std;
+ 
+// class a{
+//     public:
+//     a(){
+//         cout<<"hello"<<endl;
+//     }
+// };
+
+
+// class b{
+//     public:
+//     b(){
+//         cout<<"hi"<<endl;
+//     }
+// };
+
+
+// int main(){
+//     b b1;
+//     a a1;
+    
+    
+//     return 0;
+
+// }
+
+
+
+// #include <iostream>
+// using namespace std;
+ 
+// class a{
+//     public:
+//     void print(){
+//         cout<<"hello"<<endl;
+//     }
+// };
+
+
+// class b:public a{
+//     public:
+//     void print(){
+//         cout<<"hi"<<endl;
+//     }
+// };
+
+
+// int main(){
+    
+//     b  a1;
+//     a1.print();
+
+
+    
+    
+//     return 0;
+
+// }
+
+
+//dimond problem
+
 #include <iostream>
 using namespace std;
  
-class a{
+class g{
     public:
+    int x;
     
-    void print(){
-        cout<<"hello"<<endl;
-
-    }
-
-
 };
 
-class b{
-    public:
-    
-    void print(){
-        cout<<"hi"<<endl;
-    }
 
+class b:virtual public g{
+    public:
+    void print(){
+        cout<<x<<endl;
+    }
 };
 
-class c:public a ,public b{
+class c: virtual public g{
+    public:
+    void print(){
+        cout<<x<<endl;
+    }
+};
 
-
+class d: public b,public c{
+    
 };
 
 int main(){
-    c c1;
-    c1.a::print();
-    c1.b::print();
+    d d1;
+    d1.x=5;
+    
     
     return 0;
 
 }
+
+
+
+
+
+// #include <iostream>
+// using namespace std;
+ 
+// class g{
+//     public:
+//     void show(){
+//         cout<<"hello"<<endl;
+
+//     }
+    
+// };
+
+
+
+// class a:virtual public g{
+   
+// };
+
+// class b:virtual public g{
+//     public:
+ 
+// };
+
+// class d:public a,public b{
+    
+// };
+
+// int main(){
+//     d d1;
+//     d1.show();
+//     return 0;
+
+    
+    
+//     return 0;
+
+// }
