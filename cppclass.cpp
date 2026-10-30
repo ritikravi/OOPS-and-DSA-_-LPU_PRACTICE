@@ -1274,44 +1274,121 @@
 
 // }
 
-#include <iostream>
-using namespace std ;
+// #include <iostream>
+// using namespace std ;
 
-class shape{
-    public:
-    int line;
-    int radius;
+// class shape{
+//     public:
+//     int line;
+//     int radius;
      
-    void display(){
-        cout<<"the perimeter and circumference are listed below:"<<endl;
+//     void display(){
+//         cout<<"the perimeter and circumference are listed below:"<<endl;
 
+
+//     }
+// };
+
+// class square:public shape{
+//     public:
+//     void perimeter(){
+//         line =12;
+//         cout<<"the perimeter of teh square is :"<<4*line<<endl;
+
+//     }
+// };
+// class circle:public square{
+//     public:
+//     void circumference(){
+//         radius =3;
+//         cout<<"the circumference of the circle is :"<<2*3.14*radius<<endl;
+//     }
+// };
+
+// int main(){
+//     square s1;
+//     s1.display();
+//     s1.perimeter();
+//     circle c1;
+//     c1.display();
+//     c1.circumference();
+//     return 0;
+
+// }
+
+
+// multiple inheritance
+
+
+// #include <iostream>
+// using namespace std;
+ 
+// class a{
+//     public:
+//     void display(){
+//         cout<<"hello"<<endl;
+
+//     }
+
+
+// };
+
+// class b{
+//     public:
+//     void read(){
+//         cout<<"hi"<<endl;
+//     }
+
+// };
+
+// class c:public a ,public b{
+
+
+// };
+
+// int main(){
+//     c c1;
+//     c1.display();
+//     c1.read();
+//     return 0;
+
+// }
+
+
+
+#include <iostream>
+using namespace std;
+ 
+class a{
+    public:
+    
+    void print(){
+        cout<<"hello"<<endl;
 
     }
+
+
 };
 
-class square:public shape{
+class b{
     public:
-    void perimeter(){
-        line =12;
-        cout<<"the perimeter of teh square is :"<<4*line<<endl;
+    
+    void print(){
+        cout<<"hi"<<endl;
+    }
 
-    }
 };
-class circle:public square{
-    public:
-    void circumference(){
-        radius =3;
-        cout<<"the circumference of the circle is :"<<2*3.14*radius<<endl;
-    }
+
+class c:public a ,public b{
+
+
 };
 
 int main(){
-    square s1;
-    s1.display();
-    s1.perimeter();
-    circle c1;
-    c1.display();
-    c1.circumference();
+    c c1;
+    c1.a::print();
+    c1.b::print();
+    
     return 0;
 
 }
